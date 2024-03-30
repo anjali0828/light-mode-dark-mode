@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom class modification</title>
+    <style>
+        .theme-icon{
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: white;
+
+
+        }
+        .active{
+            border: 1px solid black;
+        }
+        
+        .theme-dark{
+            background-color: black;
+            color: white;
+        }
+        .theme-light{
+            background-color:white ;
+            color: black;
+        }
+    </style>
+</head>
+<body id="body">
+     <div>
+        <img src="dark-mode.png" class="theme-icon active" id="img-dark" onclick="darkMode()"/>
+        <img src="light-mode.png" class="theme-icon" id="img-light" onclick="lightMode()"/>
+        <h1> This is light / Dark mode Theme Changer</h1>
+        <p>
+            Light mode refers to the default setting on most devices where the background is light, 
+            usually white, and the text is dark. On the contrary, dark mode flips this design, 
+            offering a dark background, often black or dark gray, with light text.
+        </p>
+     </div>
+     <script>
+        function darkMode(){
+            const imgDark = document.getElementById('img-dark');
+            imgDark.classList.add('active');
+
+            const imglight = document.getElementById('img-light');
+            imglight.classList.remove('active');
+
+            const bodyElment = document.getElementById("body");
+            bodyElment.className = "theme-dark";
+        }
+        function lightMode(){
+            const imgDark = document.getElementById('img-dark');
+            imgDark.classList.remove('active');
+
+            const imglight = document.getElementById('img-light');
+            imglight.classList.add('active');
+
+            const bodyElment = document.getElementById("body");
+            bodyElment.className = "theme-light";
+        }
+     </script>
+</body>
+</html

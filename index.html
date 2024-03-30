@@ -9,11 +9,19 @@
             height: 40px;
             width: 40px;
             cursor: pointer;
-            padding: 5px;
             border-radius: 5px;
             background-color: white;
-
-
+            
+            padding: 5px;
+            margin-left: 400px;
+            }
+        .Mode-name{
+            text-align: center;
+            padding: 7px;
+        }
+        .Mode-desc{
+            text-align: center;
+            margin-top: 5px;
         }
         .active{
             border: 1px solid black;
@@ -33,10 +41,10 @@
      <div>
         <img src="dark-mode.png" class="theme-icon active" id="img-dark" onclick="darkMode()"/>
         <img src="light-mode.png" class="theme-icon" id="img-light" onclick="lightMode()"/>
-        <h1> This is light / Dark mode Theme Changer</h1>
-        <p>
-            Light mode refers to the default setting on most devices where the background is light, 
-            usually white, and the text is dark. On the contrary, dark mode flips this design, 
+        <h1 class="Mode-name"> This is light / Dark mode Theme Changer</h1>
+        <p class="Mode-desc">
+            Light mode refers to the default setting on most devices where the background is light, <br>
+            usually white, and the text is dark. On the contrary, dark mode flips this design,<br> 
             offering a dark background, often black or dark gray, with light text.
         </p>
      </div>
